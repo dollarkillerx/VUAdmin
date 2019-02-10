@@ -6,6 +6,8 @@ const app = express();
 
 //引入user.JS
 const users = require("./routes/api/users")
+//引入profiles
+const profile = require("./routes/api/profile")
 
 //DB config
 const db = require("./config/keys").mongoURL
@@ -30,7 +32,7 @@ require('./config/passport')(passport)
 
 //使用routes
 app.use("/api/users",users)
-
+app.use("/api/profile",profile)
 
 //配置端口与监听
 const port = process.env.PORT || 3000;
