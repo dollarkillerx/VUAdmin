@@ -92,4 +92,4 @@ router.delete('/delete/:id',passport.authenticate("jwt",{session:false}),(req,re
     .catch(error=>res.status(404).json("删除失败"))
 })
 
-module.exports = router
+module.exports = router 
